@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jkingone.jchat.ui.activity.AddFriendActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:fitsSystemWindows="true"
+        android:background="?colorAccent"
+        android:id="@+id/toolbar_addfriend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/edit_addfriend"
+        android:layout_below="@+id/toolbar_addfriend"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:drawableEnd="@drawable/search_blue_icon"
+        android:hint="用户名"
+        android:drawablePadding="5dp"
+        android:inputType="text"
+        android:singleLine="true"
+        android:imeOptions="actionSearch"
+        android:textColorHint="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:visibility="invisible"
+        android:layout_below="@+id/edit_addfriend"
+        android:id="@+id/relative_addfriend"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:background="@color/white"
+            android:id="@+id/linear_addfriend"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_avatar_friend"
+                android:layout_margin="5dp"
+                android:src="@drawable/default_useravatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_name_friend"
+                android:layout_margin="5dp"
+                android:layout_gravity="center_vertical"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <EditText
+            android:layout_margin="5dp"
+            android:gravity="left|top"
+            android:hint="说点什么吧..."
+            android:inputType="textMultiLine"
+            android:background="@drawable/shape_rect_white"
+            android:id="@+id/edit_content"
+            android:layout_below="@+id/linear_addfriend"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"/>
+
+        <Button
+            android:layout_margin="5dp"
+            android:padding="2dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_rect_pink"
+            android:layout_below="@id/edit_content"
+            android:id="@+id/btn_addfriend"
+            android:text="发送"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
